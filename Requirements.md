@@ -72,7 +72,7 @@ The application use cases are described below. Then a class diagram will be pres
 
    
 
-2. ##### Activation
+2. ##### Citizen Register Activation
 
    Some data analysis. Example: by the health authority to confer some degree of credibility of the data.
 
@@ -81,6 +81,7 @@ The application use cases are described below. Then a class diagram will be pres
 3. ##### Geo Coordinate Catch - Citizen
 
    Capture and record in a database coordinates of the citizen's location every 5 minutes
+   
    
 4. ##### Geo Coordinate Catch - Merchant
 
@@ -92,10 +93,10 @@ The application use cases are described below. Then a class diagram will be pres
 
    Present data captured on a map according to user profiles and filters of interest:
 
-   **Citizen**: better routes and places, in terms of health security, so that he can move around the city
+   **Citizen**: (1) Better routes and places, in terms of health security, so that he can move around the city; (2) Default Authorities Alerts; (3) Search for health service availability; (4) Looking for home maintenance products and services
 
-   **Merchant**: view the degree/risk of contamination of the establishment
+   **Merchant**: View the degree/risk of contamination of the establishment; (2) Acceptance to Collab19 use incentive program;
 
-   **Health Agent**: full access to data analysis in map, for example.
+   **Health Agent**: (1) Full access to data analysis in map, for example; (2) free access to consumption all data through Backend API; (3) citizen monitoring to prevent increasing risk; (4) brief communication channel with citizen
 
    

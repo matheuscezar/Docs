@@ -4,11 +4,26 @@
 
 
 
-## Data Model (Classes - for NoSQL DBs)
+## Data Model (Classes)
 
 
 
-1. User
+1. Account (for Universal Authentication and Authorization):
+
+   ```json
+   {
+   	"name": "String", // Required
+   	"username": "String", // Required
+   	"password": "String", // Required
+   	"newPassword": "String", // Transient
+   	"email": "String", // Required
+   	"roles":  "Array" // Required; an array of String (the user role names)
+   }
+   ```
+   
+   
+   
+2. Citizen
 
    ```json
    { 
@@ -21,7 +36,9 @@
    		"complement": "String", 
    		"district": "String", // Required
    		"state": "String", // Required
-   		"zipCode": "String"
+   		"zipCode": "String",
+           "lat": "Number",
+           "long": "Number"
    	},
    	"healthProfile": { 
    		"preExistingDisease": "String", // Required
@@ -46,7 +63,7 @@
 
    
 
-2. Merchant
+3. Merchant
 
    ```json
    {
@@ -70,7 +87,7 @@
 
    
 
-3. Health Authority
+4. Health Authority
 
    ```json
    {
@@ -86,7 +103,7 @@
 
    
 
-4. Admin
+5. Admin
 
    ```json
    {
@@ -100,7 +117,7 @@
 
    
 
-5. Beacons
+6. Beacons
 
    ```json
    {
