@@ -12,11 +12,11 @@
 
    ```json
    {
-   	"username": "String", // Required
-   	"password": "String", // Required
-   	"newPassword": "String", // Transient
-   	"email": "String", // Required
-   	"roles":  "Array" // Required; an array of String (the user role names)
+   	"username": "String; Required",
+   	"password": "String; Required",
+   	"newPassword": "String; Transient",
+   	"email": "String; Required", 
+   	"roles":  "Array of String"
    }
    
    Tipos de valores para roles: "Cidadao", "Agente de Saude", "Comerciante"
@@ -29,44 +29,46 @@
 
    ```json
    { 
-   	"username": "String", // Required
-   	"birthday": "Number",
-   	"gender": "Number", // Required; values 0: Male, 1: Female
+   	"username": "String; Required",
+   	"birthday": "Number; Required",
+   	"gender": "Number; Required",
    	"address": { 
-   		"place": "String", // Required
-   		"number": "String", // Required
+   		"place": "String; Required",
+   		"number": "String; Required",
    		"complement": "String", 
-   		"district": "String", // Required
-   		"state": "String", // Required
+   		"district": "String; Required",
+   		"state": "String; Required",
    		"zipCode": "String",
    		"lat": "Number",
    		"long": "Number"
    	},
    	"healthProfile": { 
-   		"anyMedicationUsage": "String", // Required
-   		"preExistingDisease": "String", // Required
-   		"hasFever": "Boolean", // Required
-   		"breathDifficulties": "Boolean", // Required
-   		"contactWithInfected": "Boolean", // Required
-   		"visitedAnyHealthCenter": "Boolean", // Required
-   		"coryza": Boolean,
-   		"cough": Boolean, 
-   		"dryCough": Boolean, 
-   		"headache": Boolean,
+   		"anyMedicationUsage": "String; Required",
+   		"preExistingDisease": "String; Required",
+   		"visitedAnyHealthCenter": "Boolean; Required",
+   		"hasFever": "Boolean; Required",
+   		"breathDifficulties": "Boolean; Required",
+   		"contactWithInfected": "Boolean; Required",
+   		"coryza": "Boolean",
+   		"cough": "Boolean", 
+   		"dryCough": "Boolean", 
+   		"headache": "Boolean",
    	},
    	"economicProfile": {
    		"incomeRange": "Number", // Required
    	},
    	"socialProfile": {
-   		"placeOfWork": "String", // Required
-   		"qttOfPeopleInYourResidentialUnit": "Number", // Required
-   		"occupation": "String" // Required
+   		"placeOfWork": "String; Required",
+   		"qttOfPeopleInYourResidentialUnit": "Number; Required",
+   		"occupation": "String"
    	},
-   	"status": "Boolean", // Required; for app control usage,
-   	"healthStatus": "Boolean" // será valorado a partir do que for preenchido no perfil de saúde do cadastro
+   	"status": "Boolean; Required",
+   	"healthStatus": "Boolean" 
    }
    
    Citizen.status: "valores possíveis: 0: ativo (valor padrão), 1: inativo"
+   Citizen.gender: "valores possíveis: 0: masculino, 1: feminino"
+   Citizen.healthStatus: "a regra de negócio para valorar esse atributo está no fluxo grama posto no repo Collab19/Docs: Fluxograma para NOTA TÉCNICA Nº 2 - 2020 - SESAP - SUAS - NUSBSESAP.pdf"
    ```
 
    
