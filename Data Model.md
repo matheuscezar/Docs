@@ -77,6 +77,7 @@
 
    ```json
    {
+       "username": "String; Required",
    	"name": "String; Required",
    	"cnpj": "String; Required",
    	"type": "Number; Required",
@@ -104,22 +105,22 @@
 
    ```json
    {
+   	"username": "String; Required",
    	"name": "String; Required",
    	"cpf": "String; Required",
    	"agency": "String; Required",
-   	"username": "String; Required",
-   	"password": "String; Required",
    	"city": "String; Required",
    	"state": "String; Required"
    }
    ```
-
    
 
+   
 5. Admin
 
    ```json
    {
+       "username": "String; Required",
    	"name": "String",
    	"cpf": "String",
    	"username": "String",
