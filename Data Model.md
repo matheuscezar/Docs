@@ -19,7 +19,7 @@
    	"roles":  "Array" // Required; an array of String (the user role names)
    }
    
-   Tipos de valores para roles: [ "Cidadao", "Agente de Saude", "Comerciante", ]
+   Tipos de valores para roles: "Cidadao", "Agente de Saude", "Comerciante"
    ** Considerar se necessário: "Agente de Saude" certamente, mais à frente, se desdobrará em outros tipos mais especializados
    ```
    
@@ -39,8 +39,8 @@
    		"district": "String", // Required
    		"state": "String", // Required
    		"zipCode": "String",
-           "lat": "Number",
-           "long": "Number"
+   		"lat": "Number",
+   		"long": "Number"
    	},
    	"healthProfile": { 
    		"anyMedicationUsage": "String", // Required
@@ -49,10 +49,10 @@
    		"breathDifficulties": "Boolean", // Required
    		"contactWithInfected": "Boolean", // Required
    		"visitedAnyHealthCenter": "Boolean", // Required
-           "coryza": Boolean,
-           "cough": Boolean, 
-           "dryCough": Boolean, 
-           "headache": Boolean,
+   		"coryza": Boolean,
+   		"cough": Boolean, 
+   		"dryCough": Boolean, 
+   		"headache": Boolean,
    	},
    	"economicProfile": {
    		"incomeRange": "Number", // Required
@@ -63,10 +63,10 @@
    		"occupation": "String" // Required
    	},
    	"status": "Boolean", // Required; for app control usage,
-       "healthStatus": "Boolean" // será valorado a partir do que for preenchido no perfil de saúde do cadastro
+   	"healthStatus": "Boolean" // será valorado a partir do que for preenchido no perfil de saúde do cadastro
    }
    
-   Citizen.status: [ 0: ativo (valor padrão), 1: inativo ]; 
+   Citizen.status: "valores possíveis: 0: ativo (valor padrão), 1: inativo"
    ```
 
    
@@ -75,25 +75,25 @@
 
    ```json
    {
-   	"name": "String",
-   	"cnpj": "String",
-   	"type": "Number", // Required; product or service marketed at the establishment
+   	"name": "String; Required",
+   	"cnpj": "String; Required",
+   	"type": "Number; Required",
    	"address": { 
-   		"place": "String", // Required
-   		"number": "String", // Required
-   		"complement": "String", 
-   		"district": "String", // Required
-   		"state": "String", // Required
-   		"zipCode": "String", // Required
-           "lat": "Number",
-           "long": "Number"
+   		"place": "String; Required",
+   		"number": "String; Required",
+   		"complement": "String; Required", 
+   		"district": "String; Required",
+   		"state": "String; Required",
+   		"zipCode": "String; Required",
+   		"lat": "Number",
+   		"long": "Number"
    	},
-       "open": "Boolean",
-       "status": "Number" // for app control usage
+   	"open": "Boolean",
+   	"status": "Number" // for app control usage
    }
    
-   Merchant.type: [ 0: Farmácias, 1: Mercado (pequeno), 2: Super Mercado, 3: Unidades de Saúde; 4: Fornecedores de Alimentos para Entregas ]
-   Merchant.status: [ 0: ativo, 1: inativo ]
+   Merchant.type: "valores possíveis: 0: Farmácias, 1: Mercado (pequeno), 2: Super Mercado, 3: Unidades de Saúde; 4: Fornecedores de Alimentos para Entregas"
+   Merchant.status: "valores possíveis: 0: ativo, 1: inativo"
    ```
 
    
@@ -102,13 +102,13 @@
 
    ```json
    {
-   	"name": "String", // Required
-   	"cpf": "String", // Required
-   	"agency": "String", // Required
-   	"username": "String", // Required
-   	"password": "String", // Required
-   	"city": "String",
-   	"state": "String"
+   	"name": "String; Required",
+   	"cpf": "String; Required",
+   	"agency": "String; Required",
+   	"username": "String; Required",
+   	"password": "String; Required",
+   	"city": "String; Required",
+   	"state": "String; Required"
    }
    ```
 
@@ -122,7 +122,7 @@
    	"cpf": "String",
    	"username": "String",
    	"password": "String",
-   	"profiles": "Array" // Array of Strings
+   	"profiles": "Array of String"
    }
    ```
 
@@ -132,11 +132,11 @@
 
    ```json
    {
-       "username": "String", // Required; User.username fk
-       "criticalStatus": "Number", // Required; inferred from the user's health profile
-   	"lat": "Number", // Required
-   	"long": "Number", // Required
-   	"time": "Number" // Required; timestamp (measurement every 5 minutes),
+       "username": "String; Required; User.username fk",
+       "criticalStatus": "Number; Required; inferred from the user's health profile",
+   	"lat": "Number; Required",
+   	"long": "Number; Required",
+   	"time": "Number; Required; timestamp (measurement every 5 minutes)"
    }
    ```
 
