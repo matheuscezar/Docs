@@ -14,9 +14,11 @@
 <br>0.2.3: **409** (conflito de registro já existente)
 <br>0.2.4: **417** (erro não mapeado a priori)
 <br>0.2.5: **500** (erro interno do servidor, possível erro no back)
+<br>public
 <br>
 <br>
-<br>
+
+### Account: URL/Collab19/OAuth/v0.0.1/[public | private]/Account
 
 #### 1: Crair um usuário: 
 
