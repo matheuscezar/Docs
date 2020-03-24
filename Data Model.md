@@ -39,8 +39,8 @@
    		"district": "String; Required",
    		"state": "String; Required",
    		"zipCode": "String",
-   		"lat": "Number",
-   		"long": "Number"
+   		"latitude": "Number",
+   		"longitude": "Number"
    	},
    	"healthProfile": { 
    		"anyMedicationUsage": "String; Required",
@@ -77,7 +77,7 @@
 
    ```json
    {
-       "username": "String; Required",
+   	"username": "String; Required",
    	"name": "String; Required",
    	"cnpj": "String; Required",
    	"type": "Number; Required",
@@ -116,27 +116,12 @@
    
 
    
-5. Admin
-
-   ```json
-   {
-       "username": "String; Required",
-   	"name": "String",
-   	"cpf": "String",
-   	"username": "String",
-   	"password": "String",
-   	"profiles": "Array of String"
-   }
-   ```
-
-   
-
 6. Beacons
 
    ```json
    {
-       "username": "String; Required; User.username fk",
-       "criticalStatus": "Number; Required; inferred from the user's health profile",
+   	"username": "String; Required; User.username fk",
+   	"criticalStatus": "Number; Required; inferred from the user's health profile",
    	"latitude": "Number; Required",
    	"longitude": "Number; Required",
    	"time": "Number; Required; timestamp (measurement every 5 minutes)"
