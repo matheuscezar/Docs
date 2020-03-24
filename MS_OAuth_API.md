@@ -17,8 +17,15 @@
 <br>
 <br>
 <br>
+
+
+
 #### 1: Crair um usuário: 
+
+------
+
 1.1: console: 
+
 <pre>
 <code>
 curl \
@@ -37,7 +44,11 @@ curl \
 <br>
 <br>
 #### 2: Autenticação de usuário: 
+
+------
+
 2.1: console: 
+
 <pre>
 <code>
 curl \
@@ -67,6 +78,9 @@ curl \
 <br>
 <br>
 #### 3: Recupera o cadastro de um usuário 
+
+------
+
 3.1: console: 
 <pre>
 <code>
@@ -85,6 +99,9 @@ curl \
 <br>
 <br>
 #### 4: Atualizar um usuário 
+
+------
+
 4.1: console: 
 <pre>
 <code>
@@ -107,6 +124,9 @@ curl \
 <br>
 <br>
 #### 5: Associar uma nova role a um usuário 
+
+------
+
 5.1: console: 
 <pre>
 <code>
@@ -127,6 +147,9 @@ curl \
 <br>
 <br>
 #### 6: Desassociar uma role de um usuário 
+
+------
+
 6.1: console: 
 <pre>
 <code>
@@ -147,6 +170,9 @@ curl \
 <br>
 <br>
 #### 7: Verificar a associação de uma ou mais roles a um usuário
+
+------
+
 7.1: console: 
 <pre>
 <code>
@@ -166,6 +192,9 @@ curl \
 <br>
 <br>
 #### 8: Recuperar a lista de roles de um usuário
+
+------
+
 8.1: console: 
 <pre>
 <code>
@@ -184,6 +213,9 @@ curl \
 <br>
 <br>
 #### 9: Atualizar a senha de usuário
+
+------
+
 9.1: console: 
 <pre>
 <code>
@@ -203,7 +235,11 @@ curl \
 <br>
 <br>
 <br>
-#### 10: Detalhamento de dados de autenticação:
+
+#### 10: Detalhamento de dados de autenticação
+
+------
+
 10.1: console: 
 <pre>
 <code>
