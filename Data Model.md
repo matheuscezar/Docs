@@ -92,6 +92,11 @@
    		"long": "Number"
    	},
    	"open": "Boolean",
+       "merchantProducts": [{
+           "name": "String; Required",
+           "qtty": "Number",
+           "availability": "Boolean"
+       }],
    	"status": "Number" // for app control usage
    }
    
