@@ -18,8 +18,6 @@
 <br>
 <br>
 
-
-
 #### 1: Crair um usuário: 
 
 ------

@@ -137,8 +137,8 @@
    {
        "username": "String; Required; User.username fk",
        "criticalStatus": "Number; Required; inferred from the user's health profile",
-   	"lat": "Number; Required",
-   	"long": "Number; Required",
+   	"latitude": "Number; Required",
+   	"longitude": "Number; Required",
    	"time": "Number; Required; timestamp (measurement every 5 minutes)"
    }
    ```
