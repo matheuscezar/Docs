@@ -19,7 +19,6 @@ curl \
 	https://localhost:8444/Collab19/Persistence/v0.0.1/Beacon
 </code>
 </pre>
-
 1.2: HTTP Response:
 <br>1.2.1: Status Code: [ 201, 400, 403, 409, 417 ]
 <br>1.2.2: Body: retorna um objeto do tipo Beacon criado
@@ -94,16 +93,15 @@ curl \
     https://localhost:8444/Collab19/Persistence/v0.0.1/Citizen/{Citizen.username}
 </code>
 </pre>
-
 3.2: HTTP Response: 
 <br>3.2.1: Status Code: [ 200, 401, 404, 417 ]
 <br>3.2.2: Body: retorna um objeto do tipo Citizen encontrado
-<br>4.3: Regras: 
+<br>3.3: Regras: 
 <br>
 <br>
 <br>
 
-### Health Agent: URL/Collab19/Persistence/v0.0.1/HealthAgent
+### HealthAgent: URL/Collab19/Persistence/v0.0.1/HealthAgent
 
 #### 1: Criar um HealthAgent
 
@@ -126,7 +124,7 @@ curl \
 <br>
 <br>
 
-#### 2: Editar um Health Agent
+#### 2: Atualizar um HealthAgent
 
 ------
 
@@ -141,7 +139,7 @@ curl \
 </pre>
 2.2: HTTP Response:
 <br>2.2.1: Status Code: [ 201, 400, 403, 409, 417 ]
-<br>2.2.2: Body: retorna um objeto do tipo Health Agent editado
+<br>2.2.2: Body: retorna um objeto do tipo Health Agent atualizado
 <br>6.3: Regras: 
 <br>
 <br>
@@ -167,7 +165,7 @@ curl \
 <br>
 <br>
 
-#### 4: Localizar um Health Agent pelo status
+#### 4: Localizar um HealthAgent pelo status
 
 ------
 
@@ -188,7 +186,7 @@ curl \
 <br>
 <br>
 
-#### 5: Localizar um Health Agent pela agencia
+#### 5: Localizar um HealthAgent pela agencia
 
 ------
 
@@ -209,7 +207,7 @@ curl \
 <br>
 <br>
 
-#### 6: Localizar um Health Agent pelo username
+#### 6: Localizar um HealthAgent pelo username
 
 ------
 
@@ -229,7 +227,7 @@ curl \
 <br>
 
 
-#### 7: Localizar Health Agent pelo status da saúde
+#### 7: Localizar HealthAgent pelo status da saúde
 
 ------
 
@@ -249,11 +247,12 @@ curl \
 <br>
 
 
-#### 8: Localizar Health Agent pelo status da saúde, endereço e pelo distrito
+#### 8: Localizar HealthAgent pelo status da saúde, endereço e pelo distrito
 
 ------
 
 8.1: console: 
+
 <pre>
 <code>
 curl \
@@ -269,7 +268,7 @@ curl \
 <br>
 
 
-#### 9: Localizar Health Agent pelo endereço e pelo distrito
+#### 9: Localizar HealthAgent pelo endereço e pelo distrito
 
 ------
 
@@ -289,7 +288,7 @@ curl \
 <br>
 
 
-#### 10: Localizar Health Agent comerciantes pelo usuário
+#### 10: Localizar HealthAgent comerciantes pelo usuário
 
 ------
 
@@ -310,7 +309,7 @@ curl \
 <br>
 
 
-#### 11: Localizar Health Agent comerciantes pelo cnpj
+#### 11: Localizar HealthAgent comerciantes pelo cnpj
 
 ------
 
@@ -332,7 +331,7 @@ curl \
 <br>
 
 
-#### 12: Localizar Health Agent comerciantes pelo tipo
+#### 12: Localizar HealthAgent comerciantes pelo tipo
 
 ------
 
@@ -352,7 +351,7 @@ curl \
 <br>
 
 
-#### 13: Localizar Health Agent comerciantes pelo status
+#### 13: Localizar HealthAgent comerciantes pelo status
 
 ------
 
@@ -373,7 +372,7 @@ curl \
 <br>
 
 
-#### 14: Localizar Health Agent comerciantes pelo endereço e pelo restrito
+#### 14: Localizar HealthAgent comerciantes pelo endereço e pelo restrito
 ------
 
 14.1: console: 
@@ -394,7 +393,7 @@ curl \
 <br>
 
 
-#### 15: Localizar Health Agent Beacon pelo username
+#### 15: Localizar HealthAgent Beacon pelo username
 ------
 
 15.1: console: 
@@ -415,7 +414,7 @@ curl \
 <br>
 
 
-#### 16: Localizar Health Agent Beacon pelo username e pelo timeAfter
+#### 16: Localizar HealthAgent Beacon pelo username e pelo timeAfter
 ------
 
 16.1: console: 
@@ -436,7 +435,7 @@ curl \
 <br>
 
 
-#### 17: Localizar Health Agent Beacon pelo username e pelo time before
+#### 17: Localizar HealthAgent Beacon pelo username e pelo time before
 ------
 
 17.1: console: 
@@ -453,8 +452,55 @@ curl \
 <br>17.3 Regras:
 <br>
 
+#### 18: Criar um CareUnit:
 
-## Merchant
+------
+
+18.1: console: 
+
+<pre>
+<code>
+curl \
+	--insecure \
+    -X POST 
+    -H "Authorization: Bearer [TOKEN]" \
+    -d "{ "name":"clovis sarinho", "phone": "(84) 97884 9566", "specialization": "traumas", "status":0, "address":{ "place":"place b", "number":"1", "district":"district b", "city":"city b", "state":"state b", "country":"BRASIL" } }" \
+    https://localhost:8444/Collab19/Persistence/v0.0.1/HealthAgent/CareUnit
+</code>
+</pre>
+
+18.2: HTTP Response:
+<br>18.2.1: Status Code: [ 201, 400, 403, 409, 417 ]
+<br>18.2.2: Body: retorna um objeto do tipo Citizen criado
+<br>18.3: Regras:
+<br>
+<br>
+<br>
+
+#### 19: Atualiar um Citizen
+
+------
+
+19.1: console: 
+
+<pre>
+<code>
+curl \
+	--insecure \
+    -X PUT 
+    -H "Authorization: Bearer [TOKEN]" \
+    -d "{ "id": "asdf322w3sf3255w6", "logVersion": 0, "name":"clovis sarinho", "phone": "(84) 97884 9566", "specialization": "traumas", "status":0, "address":{ "place":"place b", "number":"1", "district":"district b", "city":"city b", "state":"state b", "country":"BRASIL" } }" \
+    https://localhost:8444/Collab19/Persistence/v0.0.1/HealthAgent/CareUnit
+</code>
+</pre>
+
+19.2: HTTP Response:
+<br>19.2.1: Status Code: [ 201, 400, 403, 409, 417 ]
+<br>19.2.2: Body: retorna um objeto do tipo Citizen atualizado
+<br>19.3: Regras: --
+
+
+## Merchant: URL/Collab19/Persistence/v0.0.1/Merchant
 
 #### 1: Criar um Merchant
 ------
@@ -516,5 +562,104 @@ curl \
 <br>3.2.1: Status Code: [ 201, 400, 403, 409, 417 ]
 <br>3.2.2: Body: retorna um objeto do tipo Merchant encontrado
 <br>3.3: Regras:
+<br>
+<br>
+<br>
+
+## CareUnit: URL/Collab19/Persistence/v0.0.1/CareUnit
+
+#### 1: Localizar Citizen pelo username
+
+------
+
+1.1: console: 
+
+<pre>
+<code>
+curl \
+	--insecure \
+    -X GET 
+    -H "Authorization: Bearer [TOKEN]" \
+    https://localhost:8444/Collab19/Persistence/v0.0.1/CareUnit/{CareUnit.name}
+</code>
+</pre>
+
+1.2: HTTP Response: 
+<br>1.2.1: Status Code: [ 200, 401, 404, 417 ]
+<br>1.2.2: Body: retorna um objeto do tipo Citizen encontrado
+<br>1.3: Regras: 
+<br>
+<br>
+<br>
+
+#### 2: Localizar CareUnits por especialização
+
+------
+
+2.1: console: 
+
+<pre>
+<code>
+curl \
+	--insecure \
+    -X GET 
+    -H "Authorization: Bearer [TOKEN]" \
+    https://localhost:8444/Collab19/Persistence/v0.0.1/CareUnit/specialization/{CareUnit.specialization}
+</code>
+</pre>
+
+2.2: HTTP Response: 
+<br>2.2.1: Status Code: [ 200, 401, 404, 417 ]
+<br>2.2.2: Body: retorna uma lista de objetos do tipo CareUnit encontrados
+<br>2.3: Regras: 
+<br>
+<br>
+<br>
+
+#### 3: Localizar CareUnits por fone
+
+------
+
+3.1: console: 
+
+<pre>
+<code>
+curl \
+	--insecure \
+    -X GET 
+    -H "Authorization: Bearer [TOKEN]" \
+    https://localhost:8444/Collab19/Persistence/v0.0.1/CareUnit/phone/{CareUnit.phone}
+</code>
+</pre>
+
+3.2: HTTP Response: 
+<br>3.2.1: Status Code: [ 200, 401, 404, 417 ]
+<br>3.2.2: Body: retorna uma lista de objetos do tipo CareUnit encontrados
+<br>3.3: Regras: 
+<br>
+<br>
+<br>
+
+#### 4: Localizar CareUnits por bairro (district)
+
+------
+
+4.1: console: 
+
+<pre>
+<code>
+curl \
+	--insecure \
+    -X GET 
+    -H "Authorization: Bearer [TOKEN]" \
+    https://localhost:8444/Collab19/Persistence/v0.0.1/CareUnit/addressDistrict/{CareUnit.addressDistrict}
+</code>
+</pre>
+
+4.2: HTTP Response: 
+<br>4.2.1: Status Code: [ 200, 401, 404, 417 ]
+<br>4.2.2: Body: retorna uma lista de objetos do tipo CareUnit encontrados
+<br>4.3: Regras: 
+<br>
 <br>
 <br>

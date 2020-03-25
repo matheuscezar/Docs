@@ -71,7 +71,7 @@
    
    Citizen.status: "valores possíveis: 0: ativo (valor padrão), 1: inativo"
    Citizen.gender: "valores possíveis: 0: masculino, 1: feminino"
-   Citizen.healthStatus: "a regra de negócio para valorar esse atributo está no fluxo grama posto no repo Collab19/Docs: Fluxograma para NOTA TÉCNICA Nº 2 - 2020 - SESAP - SUAS - NUSBSESAP.pdf"
+   Citizen.healthStatus: "a regra de negócio para valorar esse atributo está no fluxo grama posto no repo Collab19/Docs: Fluxograma para NOTA TÉCNICA Nº 2 - 2020 - SESAP - SUAS - NUSBSESAP.pdf; esse atributo precisa ser validado por agnete de saúde para que possa haver sugestão de encaminhamento do cidadão a unidade saúde"
    Citizen.dependentOf: "aqui vai o cpf como chave para identificar o responsável por essa instância de Citizen"
    
    Regra: "os atributos nane e cpf devem ser usados com cuidado. ninguém que não tenha autorização poderá ler essas informações. mesmo sendo um usuário da plataforma com o role ROLE_COLLAB19_HEALTHAGENT PRECISA haver cuidado. Apenas perfis muito específicos de usuário devem ter acesso a essa informação. A princípio, até isso ficar bem amarrado com a autoridade pública, esses dados servirão apenas para consumo interno fazendo distinções entre os cadastros e para criar ordem de associação entre os cadastros dos objetos Citizen"
@@ -112,7 +112,34 @@
 
    
 
-4. Health Agent
+4. CareUnit
+
+   ```
+   {
+   	"name": "String; Required",
+   	"specialization": "String; Required",
+   	"phone": "String; Required",
+   	"email": "String; Required",
+   	"whatsapp": "String; Required",
+   	"bedsAvailable": "Boolean",
+   	"address": {
+   		"place": "String; Required",
+   		"number": "String; Required",
+		"complement": "String",
+   		"district": "String; Required",
+   		"city": "String; Required",
+   		"state": "String; Required",
+   		"country": "String; Required",
+   		"latitude": "Number; Required",
+   		"longitude": "Number; Required",
+   	},
+   	"status": "Boolena; Required"
+   }
+   ```
+   
+   
+   
+5. Health Agent
 
    ```json
    {
@@ -124,9 +151,9 @@
    	"state": "String; Required"
    }
    ```
-   
 
    
+
 6. Beacons
 
    ```json
