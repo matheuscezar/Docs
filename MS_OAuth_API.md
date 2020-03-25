@@ -1,6 +1,9 @@
 ## Descrição da API do Serviço de Autenticação
 
+**URL BASE**: https://162.241.91.243:8443/Collab19/OAuth/v0.0.1/
+
 #### 0: Observações Gerais:
+
 0.1: ROLES de usuário: 
 <br>0.1.1: **ROLE_GUEST**, 
 <br>0.1.2: **ROLE\_COLLAB19\_CITIZEN**, 

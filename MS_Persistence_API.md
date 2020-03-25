@@ -1,5 +1,7 @@
 ## Descrição da API de Persistência
 
+**URL BASE**: https://162.241.91.243:8443/Collab19/Persistence/v0.0.1/
+
 
 
 ### Beacon: URL/Collab19/Persistence/v0.0.1/Beacon
@@ -158,6 +160,7 @@ curl \
 ------
 
 3.1: console: 
+
 <pre>
 <code>
 curl \
