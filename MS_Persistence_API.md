@@ -446,6 +446,8 @@ curl \
 	-X GET \
 	Base/Collab19/Persistence/v0.0.1/HealthAgent/Beacons/{username}/timeBefore/{time}
 17.2: HTTP Response:
+</code>
+</pre>
 <br>17.2.1: Status Code: [ 200,  404, 417 ]
 <br>17.2.2: Body: retorna um objeto do tipo Beacon encontrado pelo {username} e pelo {time}
 <br>17.3 Regras:
