@@ -5,7 +5,9 @@
 <br>0.1.1: **ROLE_GUEST**, 
 <br>0.1.2: **ROLE\_COLLAB19\_CITIZEN**, 
 <br>0.1.3: **ROLE\_COLLAB19\_MERCHANT**, 
-<br>0.1.4: **ROLE\_COLLAB19\_HEALTHAGENT**
+<br>0.1.4: **ROLE\_COLLAB19\_HEALTHAGENT**,
+<br>0.1.5: **ROLE\_AUTH\_USER**,
+<br>0.1.6: **ROLE\_AUTH\_ADMIN**
 <br>0.2: HTTP Status Code:
 <br>0.2.1: **400** (requisição mal formada - possível erro no front), 
 <br>0.2.2: **401** (credenciais não reconhecidas), 
@@ -40,9 +42,10 @@ curl \
 <br>1.2.1: Status Code: [ 201, 400, 409, 417 ] 
 <br>1.2.2: Body:
 <br>1.3: Regras:
+<br>1.3.1: leituar e escrita sem restrição
 <br>
 <br>
-<br>
+
 #### 2: Autenticação de usuário: 
 
 ------
@@ -73,10 +76,12 @@ curl \
   "jti" : ""
 }
 </code></pre>
-<br>2.3: Regras: --
+<br>2.3: Regras:
+<br>2.3.1: leituar e escrita sem restrição
 <br>
 <br>
 <br>
+
 #### 3: Recupera o cadastro de um usuário 
 
 ------
@@ -95,9 +100,11 @@ curl \
 <br>3.2.1: Status Code: [ 200, 401, 404, 417 ] 
 <br>3.2:2: Body: retorna um objeto do tipo Account (Ver definição no 'Data Model.md')
 <br>3.3: Regras: 
+<br>3.3.1: leituar e escrita: ROLE_COLLAB
 <br>
 <br>
 <br>
+
 #### 4: Atualizar um usuário 
 
 ------
