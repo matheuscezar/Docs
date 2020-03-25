@@ -29,6 +29,8 @@
 
    ```json
    { 
+   	"name": "String; Required",
+   	"cpf": "String; Required",
    	"username": "String; Required",
    	"birthday": "Number; Required",
    	"gender": "Number; Required",
