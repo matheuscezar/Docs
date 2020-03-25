@@ -30,7 +30,8 @@
    ```json
    { 
    	"name": "String; Required",
-   	"cpf": "String; Required",
+   	"cpf": "String",
+   	"dependentOf": "String; Required",
    	"username": "String; Required",
    	"birthday": "Number; Required",
    	"gender": "Number; Required",
@@ -71,6 +72,7 @@
    Citizen.status: "valores possíveis: 0: ativo (valor padrão), 1: inativo"
    Citizen.gender: "valores possíveis: 0: masculino, 1: feminino"
    Citizen.healthStatus: "a regra de negócio para valorar esse atributo está no fluxo grama posto no repo Collab19/Docs: Fluxograma para NOTA TÉCNICA Nº 2 - 2020 - SESAP - SUAS - NUSBSESAP.pdf"
+   Citizen.dependentOf: "aqui vai o cpf como chave para identificar o responsável por essa instância de Citizen"
    
    Regra: "os atributos nane e cpf devem ser usados com cuidado. ninguém que não tenha autorização poderá ler essas informações. mesmo sendo um usuário da plataforma com o role ROLE_COLLAB19_HEALTHAGENT PRECISA haver cuidado. Apenas perfis muito específicos de usuário devem ter acesso a essa informação. A princípio, até isso ficar bem amarrado com a autoridade pública, esses dados servirão apenas para consumo interno fazendo distinções entre os cadastros e para criar ordem de associação entre os cadastros dos objetos Citizen"
    ```
