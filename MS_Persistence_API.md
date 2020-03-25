@@ -119,9 +119,10 @@ curl \
 curl \
 	-H "Content-Type: application/json" \
 	-X POST \
-	Base/Collab19/Persistence/v0.0.1/HealthAgent/
+	Base/Collab19/Persistence/v0.0.1/HealthAgent
 </code>
 </pre>
+
 1.2: HTTP Response:
 <br>1.2.1: Status Code: [ 201, 400, 403, 409, 417 ]
 <br>1.2.2: Body: retorna um objeto do tipo Health Agent criado
@@ -140,9 +141,10 @@ curl \
 curl \
 	-H "Content-Type: application/json" \
 	-X PUT \
-	Base/Collab19/Persistence/v0.0.1/HealthAgent/
+	Base/Collab19/Persistence/v0.0.1/HealthAgent
 </code>
 </pre>
+
 2.2: HTTP Response:
 <br>2.2.1: Status Code: [ 201, 400, 403, 409, 417 ]
 <br>2.2.2: Body: retorna um objeto do tipo Health Agent atualizado
@@ -155,7 +157,7 @@ curl \
 
 ------
 
-7.1: console: 
+3.1: console: 
 <pre>
 <code>
 curl \
