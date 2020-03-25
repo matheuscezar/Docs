@@ -4,7 +4,9 @@
 
 ### Beacon: URL/Collab19/Persistence/v0.0.1/Beacon
 
-#### 1: Crair um Criar um beacon: 
+##### _Roles_: ROLE_COLLAB19\_CITIZEN
+
+#### 1: Criar um beacon: 
 
 ------
 
@@ -28,6 +30,8 @@ curl \
 <br>
 
 ### Citizen: URL/Collab19/Persistence/v0.0.1/Citizen
+
+#### _Roles_: ROLE\_COLLAB19\_CITIZEN
 
 #### 1: Criar um Citizen:
 
@@ -103,6 +107,8 @@ curl \
 
 ### HealthAgent: URL/Collab19/Persistence/v0.0.1/HealthAgent
 
+##### _Roles_: ROLE\_COLLAB19\_HEALTHAGENT
+
 #### 1: Criar um HealthAgent
 
 ------
@@ -140,7 +146,7 @@ curl \
 2.2: HTTP Response:
 <br>2.2.1: Status Code: [ 201, 400, 403, 409, 417 ]
 <br>2.2.2: Body: retorna um objeto do tipo Health Agent atualizado
-<br>6.3: Regras: 
+<br>2.3: Regras: 
 <br>
 <br>
 <br>
@@ -181,7 +187,7 @@ curl \
 4.2: HTTP Response:
 <br>4.2.1: Status Code: [ 200,  404, 417 ]
 <br>4.2.2: Body: retorna uma lista de objetos do tipo Health Agent encontrada pelo {status}
-<br>8.3: Regras: 
+<br>4.3: Regras: 
 <br>
 <br>
 <br>
@@ -202,7 +208,7 @@ curl \
 5.2: HTTP Response:
 <br>5.2.1: Status Code: [ 200,  404, 417 ]
 <br>5.2.2: Body: retorna uma lista de objetos do tipo Health Agent encontrada pela {agency}
-<br>9.3: Regras: 
+<br>5.3: Regras: 
 <br>
 <br>
 <br>
@@ -223,7 +229,7 @@ curl \
 6.2: HTTP Response:
 <br>6.2.1: Status Code: [ 200,  404, 417 ]
 <br>6.2.2: Body: retorna um objeto do tipo Citizen encontrada pelo {username}
-<br>7.3: Regras: 
+<br>6.3: Regras: 
 <br>
 
 
@@ -500,9 +506,13 @@ curl \
 <br>19.3: Regras: --
 
 
+
 ## Merchant: URL/Collab19/Persistence/v0.0.1/Merchant
 
+##### _Roles_: ROLE\_COLLAB19\_MERCHANT
+
 #### 1: Criar um Merchant
+
 ------
 
 1.1: console: 
@@ -567,6 +577,8 @@ curl \
 <br>
 
 ## CareUnit: URL/Collab19/Persistence/v0.0.1/CareUnit
+
+##### _Roles_: ROLE_COLLAB19\_CITIZEN, ROLE\_COLLAB19\_MERCHANT, ROLE\_COLLAB19\_HEALTHAGENT
 
 #### 1: Localizar Citizen pelo username
 
